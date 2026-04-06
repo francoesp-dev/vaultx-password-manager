@@ -59,7 +59,7 @@ npm run test
 ```
 
 ## ⚙️ Installation & Execution
-Clone the repository: git clone https://github.com/your-username/vaultx.git
+Clone the repository: git clone https://github.com/francoesp-dev/vaultx-password-manager.git
 
 Install dependencies:
 ```bash
