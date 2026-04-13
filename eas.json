@@ -10,15 +10,14 @@
       "channel": "development"
     },
     "preview": {
-      "distribution": "internal",
       "android": {
         "buildType": "apk"
       },
-      "channel": "preview"
+      "env": {
+        "npm_config_legacy_peer_deps": "true"
+      }
     },
-    "production": {
-      "channel": "production"
-    }
+    "production": {}
   },
   "submit": {
     "production": {}
