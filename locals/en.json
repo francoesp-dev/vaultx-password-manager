@@ -10,7 +10,7 @@
     "generatorTab": "GENERATOR",
     "settingsTab": "SETTINGS",
     "parametersTitleTab": "Cryptographic Parameters",
-    "lengthTab": "Longitud",
+    "lengthTab": "Length",
     "uppercaseTab": "Uppercase (A-Z)",
     "lowercaseTab": "Lowercase (a-z)",
     "numbersTab": "Numbers (0-9)",
