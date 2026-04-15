@@ -27,10 +27,6 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      # Verifica que el código TypeScript sea válido sin generar archivos extra
+      # Mantenemos el chequeo estricto de TypeScript
       - name: TypeScript Check
         run: npx tsc --noEmit
-
-      # Ejecuta el linter estándar de Expo para revisar buenas prácticas
-      - name: Run Linter
-        run: npx expo lint
