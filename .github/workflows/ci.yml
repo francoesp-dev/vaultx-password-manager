@@ -1,0 +1,36 @@
+name: Expo Mobile CI Guardian
+
+on:
+  push:
+    branches: [ "dev" ]
+  pull_request:
+    branches: [ "main" ]
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+jobs:
+  lint-and-typecheck:
+    name: Syntax & TypeScript Check
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      # Verifica que el código TypeScript sea válido sin generar archivos extra
+      - name: TypeScript Check
+        run: npx tsc --noEmit
+
+      # Ejecuta el linter estándar de Expo para revisar buenas prácticas
+      - name: Run Linter
+        run: npx expo lint
